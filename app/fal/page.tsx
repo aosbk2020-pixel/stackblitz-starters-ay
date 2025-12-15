@@ -6,7 +6,7 @@ type Explain = {
   text: string;
 };
 
-/* ================= TAROT YORUMLARI ================= */
+/* ================= TAROT YORUMLARI (GÜNCELLENMİŞ) ================= */
 // Swords03 ve Swords10 Kılıç kartları kaldırıldı.
 const TAROT_EXPLAINS: Record<string, Explain> = {
   // --- KUPALAR ---
@@ -101,8 +101,8 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
   Pents01: {
     title: "TAROT - TILSIM ASI",
     text:
-      "Yeni bir maddi fırsat, sağlam bir başlangıç.\n" +
-      "Para, iş, sağlık veya düzen konusunda “toprak” enerjisi açılıyor. Küçük ama güven veren bir adım kapıda. Fırsat kapıda ama değerlendirmeyi geciktiriyor olabilirsin; erteleme veya kararsızlık ilerlemeyi yavaşlatır."
+      "Yeni bir maddi fırsat, sağlam bir başlangıç. Para, iş, sağlık veya düzen konusunda “toprak” enerjisi açılıyor.\n" +
+      "Küçük ama güven veren bir adım kapıda. Fırsat kapıda ama değerlendirmeyi geciktiriyor olabilirsin; erteleme veya kararsızlık ilerlemeyi yavaşlatır."
   },
   Pents02: {
     title: "TAROT - TILSIM İKİLİSİ",
@@ -138,7 +138,8 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
     title: "TAROT - TILSIM YEDİLİSİ",
     text:
       "Sabır ve bekleme enerjisi.\n" +
-      "Ektiğin bir şeyin yavaş yavaş meyve vermesi gibi… Sonuç geliyor ama acele edersen yorulursun. “Boşa mı uğraştım?” hissine kaplırsan sadece minicik bir dokunuş yeterli olacak."
+      "Ektiğin bir şeyin yavaş yavaş meyve vermesi gibi… Sonuç geliyor ama acele edersen yorulursun.\n" +
+      "“Boşa mı uğraştım?” hissine kaplırsan sadece minicik bir dokunuş yeterli olacak."
   },
   Pents08: {
     title: "TAROT - TILSIM SEKİZLİSİ",
@@ -187,7 +188,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
     title: "TAROT - KILIÇ ASI",
     text:
       "Keskin bir netlik geliyor.\n" +
-      "Zihnin açılıyor, doğru kararı görüyorsun. Yeni bir fikir, karar veya konuşma “tamam, işte bu” dedirtebilir. Bir noktaya odaklanmak her şey berraklaştıracak."
+      "Zihnin açılıyor, doğru kararı görüyorsun. Yeni bir fikir, karar veya konuşma “tamam, işte bu” dedirtebilir. Bir noktaya odaklanmak her şeyi berraklaştıracak."
   },
   Swords02: {
     title: "TAROT - KILIÇ İKİLİSİ",
@@ -195,7 +196,6 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Kararsızlık ve “bekleyeyim de netleşsin” hissi.\n" +
       "İki seçenek arasında duruyorsun; acele etmemen iyi ama sonsuza kadar da beklememek lazım. Gözünü açma ve karar verme anı. Böylece hangi yolun seni rahatlattığını daha net görürsün."
   },
-  // Swords03: KALDIRILDI
   Swords04: {
     title: "TAROT - KILIÇ DÖRTLÜSÜ",
     text:
@@ -232,7 +232,6 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Gece uyutmayan düşünceler.\n" +
       "Gereğinden büyük endişe, kuruntu, “ya şöyle olursa?” korkusu. Zihin seni yoruyor; gerçek durum genelde düşündüğün kadar karanlık değil. Kaygıdan uzaklaşıp biraz nefes aldığınızda, geleceğiniz önünüzde açılacaktır."
   },
-  // Swords10: KALDIRILDI
   Swords11: {
     title: "TAROT - KILIÇ PRENSİ",
     text:
@@ -257,86 +256,86 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Mantık, tarafsızlık, net karar verme.\n" +
       "Duygudan çok akla yaslanma. Otorite, düzgün iletişim, adil duruş. Biraz esnemek ve duyguyu da hesaba katmak fayda sağlar."
   },
-  // --- DEĞNEKLER ---
+  // --- DEĞNEKLER (TEKRAR İNGİLİZCE NUMARALI KEY'LERE DÖNÜLDÜ) ---
   Wands01: {
     title: "TAROT - DEĞNEK ASI",
     text:
       "Bu kart bir kıvılcım anı. İçinden gelen ani bir heves, “bunu yapmak istiyorum” hissi.\n" +
       "Henüz plan yok ama enerji var. İlham taze, motivasyon canlı. Cesaret ya da hareket eksik; erteleyip söndürüyor olabilirsin. Kıvılcımı fark ettiysen, küçük de olsa bir adım at."
   },
-  "Değnek İkilisi": {
+  Wands02: { // Değnek İkilisi
     title: "TAROT - DEĞNEK İKİLİSİ",
     text:
       "Kararsızlık içindesin; ‘ya olmazsa?’ ve ‘acaba daha iyisi var mı?’ diye düşündüğün bir dönemdesin.\n" +
       "Aslında elinde sağlam bir temel var. Bir adım daha atarsan alan genişleyecek ve yol kendiliğinden açılacak."
   },
-  "Değnek Üçlüsü": {
+  Wands03: { // Değnek Üçlüsü
     title: "TAROT - DEĞNEK ÜÇLÜSÜ",
     text:
       "Bir adım atmışsın ve şimdi ufka bakıyorsun; fırsatlar, haberler, yeni yollar yaklaşmakta.\n" +
       "Ama bir yandan da “ya yanlış tarafa bakıyorsam?” diye bir tereddüdün var. Aslında seçeneklerin açık, biraz sabır, biraz güven… netlik gelince resim kendiliğinden tamamlanacak."
   },
-  "Değnek Dörtlüsü": {
+  Wands04: { // Değnek Dörtlüsü
     title: "TAROT - DEĞNEK DÖRTLÜSÜ",
     text:
       "Mutluluk kapıda ama sen tam içine giremiyorsun. ‘Sevineyim mi, yoksa daha erken mi?’ tereddüdü var.\n" +
       "Bir tık gevşesen, keyif kendiliğinden akacak ve emeğinin meyvesini alacaksın."
   },
-  "Değnek Beşlisi": {
+  Wands05: { // Değnek Beşlisi
     title: "TAROT - DEĞNEK BEŞLİSİ",
     text:
       "Ufak tefek sürtüşmeler, aynı anda herkesin konuştuğu bir ortam.\n" +
       "“Kim haklı çıkacak bakalım” havası var. Boş tartışmalara girme. Biraz sabır, biraz da esnek bakış açısı yeter. Rahat bırakınca işler kendiliğinden toparlanıyor."
   },
-  "Değnek Altılısı": {
+  Wands06: { // Değnek Altılısı
     title: "TAROT - DEĞNEK ALTILISI",
     text:
       "‘Oh be, sonunda!’ hissini yaşayabilmek ve çevreden onay, destek alabilmek için elinden gelenin en iyisini yap ve kendini kutla.\n" +
       "Mesele zaferden çok, kendini haklı bulmayı öğrenmen. Esas ödül senin iç rahatlığın."
   },
-  "Değnek Yedilisi": {
+  Wands07: { // Değnek Yedilisi
     title: "TAROT - DEĞNEK YEDİLİSİ",
     text:
       "Kendi duruşunu koruma dönemindesin; bazen açıklama yapmak zorundaymışsın gibi hissetsen de aslında sağlam zemindesin.\n" +
       "Gereksiz tartışmalara girme, enerjini gerçekten önemli olana sakla."
   },
-  "Değnek Sekizlisi": {
+  Wands08: { // Değnek Sekizlisi
     title: "TAROT - DEĞNEK SEKİZLİSİ",
     text:
       "Olaylar ya peş peşe geliyor ya da birden tıkanıyor, ama kendine net bir yön belirlersen amacına rahatlıkla ulaşabilirsin.\n" +
       "Değişim istiyorsan, o kıvılcımı önce sen yakmalısın; hareketi başlatınca her şey hızla yerine oturacak."
   },
-  "Değnek Dokuzlusu": {
+  Wands09: { // Değnek Dokuzlusu
     title: "TAROT - DEĞNEK DOKUZLUSU",
     text:
       "Bir şey için çok çabalamışsın, enerjin düşmüş ama hâlâ ayaktasın.\n" +
       "Şu an aşırı tetikte olman normal; çünkü eski yorgunluklar bugünü gereğinden sert gösteriyor. Ama gerçekten son düzlüğe girmişsin. Biraz sabır, biraz da kendine şefkat… hepsi yerine oturacak."
   },
-  "Değnek Onlusu": {
+  Wands10: { // Değnek Onlusu
     title: "TAROT - DEĞNEK ONLUSU",
     text:
       "Üstüne çok yük almışsın.\n" +
       "‘Her şeyi ben halledeyim’ modu çalışıyor ama omuzların dolmuş. İş bitmeye yakın ama yorgunluk fazla. Biraz paylaşsan, biraz bıraksan hem rahatlayacak hem de özgürleşeceksin."
   },
-  "Page of Wands": { // PRENS
+  "Page of Wands": { 
     title: "TAROT - DEĞNEK PRENSİ",
     text:
       "İçinde bir heves kıpırdıyor. Yeni bir fikir, yeni bir yön, “yapsam mı?” dedirten bir enerji var.\n" +
       "Daha yolun tamamını görmüyorsun ama ilk adımı attığında gerisi kendini gösterecek. Kalbini dinlerken aklını tamamen geride bırakmadan kendine bir şans ver."
   },
-  "Değnek Şövalyesi": {
+  Wands12: { // Değnek Şövalyesi
     title: "TAROT - DEĞNEK ŞÖVALYESİ",
     text:
       "Ateş gibi bir enerjin var ama dozunu kaçırmamalısın.\n" +
       "Bir şey istiyorsun ama sabır düşük ve yön biraz karışık. Sakin bir nefes al, detayları kaçırma. Unutma: nereye gittiğini bilmeyen, hiçbir yere gidemez."
   },
-  "Değnek Kraliçesi": {
+  Wands13: { // Değnek Kraliçesi
     title: "TAROT - DEĞNEK KRALİÇESİ",
     text:
       "İçindeki potansiyeli açığa çıkarırsan bitiş çizgisine bir adım daha yaklaşırsın.\n" +
       "Çevrendeki insanlara dikkat et, seçici ol ve enerjini doğru alana aktar. Ayrıntılara özen gösterip sezgilerine güvenirsen yolun açacak."
   },
-  "Değnek Kralı": {
+  Wands14: { // Değnek Kralı
     title: "TAROT - DEĞNEK KRALI",
     text:
       "Gücünü fark edersen ve adımların planlı olursa güçlü sonuçlar alırsın.\n" +
@@ -459,25 +458,228 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
   }
 };
 
-/* ================= İSKAMBİL YORUMLARI ================= */
+/* ================= YENİ İSKAMBİL YORUMLARI ================= */
 const ISKAMBIL_EXPLAINS: Record<string, Explain> = {
+  // SİNEK (CLUBS)
   "2_of_clubs": {
     title: "İSKAMBİL - SİNEK İKİLİ",
-    text:
-      "Küçük ama önemli bir başlangıç.\n" +
-      "İki seçenek veya iki kişi arasında kalma hali."
+    text: "Önünde iki yol var; yakında hangisini sürdürebileceğin netleşecek."
   },
   "3_of_clubs": {
-    title: "İSKAMBİL - SİNEK ÜÇLÜ",
-    text:
-      "Gelişme ve hareket.\n" +
-      "Bir işin adım adım ilerlemesi."
+    title: "İSKAMBİL - SİNEK ÜÇLÜSÜ",
+    text: "Bir işi büyütme veya alanını geniletme fırsatı doğuyor."
   },
   "4_of_clubs": {
-    title: "İSKAMBİL - SİNEK DÖRTLÜ",
-    text:
-      "Denge ve sağlam duruş.\n" +
-      "Şartları zorlamadan ilerleme."
+    title: "İSKAMBİL - SİNEK DÖRTLÜSÜ",
+    text: "Emek verdiğin düzen sağlamlaşıyor."
+  },
+  "5_of_clubs": {
+    title: "İSKAMBİL - SİNEK BEŞLİSİ",
+    text: "Rekabet seni geriye değil ileriye taşıyacak."
+  },
+  "6_of_clubs": {
+    title: "İSKAMBİL - SİNEK ALTILISI",
+    text: "Görünür bir başarı ve takdir geliyor."
+  },
+  "7_of_clubs": {
+    title: "İSKAMBİL - SİNEK YEDİLİSİ",
+    text: "Alanını koruman gerekecek ama güçlü duracaksın."
+  },
+  "8_of_clubs": {
+    title: "İSKAMBİL - SİNEK SEKİZLİSİ",
+    text: "Olaylar hızlanıyor ve akış başlıyor."
+  },
+  "9_of_clubs": {
+    title: "İSKAMBİL - SİNEK DOKUZLUSU",
+    text: "Son bir gayretle süreci tamamlayacak ve rahatlayacaksın."
+  },
+  "10_of_clubs": {
+    title: "İSKAMBİL - SİNEK ONLUSU",
+    text: "Yük artmış gibi görünse de bitişe çok yaklaştın."
+  },
+  "ace_of_clubs": {
+    title: "İSKAMBİL - SİNEK ASI",
+    text: "Yeni bir enerji, fikir veya başlangıç doğuyor."
+  },
+  "jack_of_clubs2": {
+    title: "İSKAMBİL - SİNEK VALESİ", 
+    text: "Üstlenilmesi gereken bir sorumluluk açıkça ortaya çıkacak ve belirsizlik sona erecek."
+  },
+  "queen_of_clubs2": {
+    title: "İSKAMBİL - SİNEK KIZI", 
+    text: "Sağlam duruş, sınır koymanın ne kadar rahatlatıcı olduğunu gösterecek."
+  },
+  "king_of_clubs2": {
+    title: "İSKAMBİL - SİNEK PAPAZI", 
+    text: "Güç ve inisiyatif dengeli kullanıldığında yeni fırsatlar kendiliğinden açılacak."
+  },
+
+  // KARO (DIAMONDS)
+  "2_of_diamonds": {
+    title: "İSKAMBİL - KARO İKİLİSİ",
+    text: "İki maddi seçenekten biri uzun vadede güven ve rahatlık getirecek; sonuç olumlu."
+  },
+  "3_of_diamonds": {
+    title: "İSKAMBİL - KARO ÜÇLÜSÜ",
+    text: "Küçük ama istikrarlı bir kazanç yolu açılıyor."
+  },
+  "4_of_diamonds": {
+    title: "İSKAMBİL - KARO DÖRTLÜSÜ",
+    text: "Maddi konularda daha temkinli ama güvende olacağın bir dönem başlıyor."
+  },
+  "5_of_diamonds": {
+    title: "İSKAMBİL - KARO BEŞLİSİ",
+    text: "Kısa süreli bir zorlanma, daha sağlam bir düzene geçiş sağlayacak."
+  },
+  "6_of_diamonds": {
+    title: "İSKAMBİL - KARO ALTILISI",
+    text: "Verme–alma dengesi yerine oturuyor."
+  },
+  "7_of_diamonds": {
+    title: "İSKAMBİL - KARO YEDİLİSİ",
+    text: "Sabırla beklenen bir maddi gelişme yaklaşıyor."
+  },
+  "8_of_diamonds": {
+    title: "İSKAMBİL - KARO SEKİZLİSİ",
+    text: "Emek verdiğin konu ustalığa dönüşüyor."
+  },
+  "9_of_diamonds": {
+    title: "İSKAMBİL - KARO DOKUZLUSU",
+    text: "Kendi ayakların üzerinde durduğun bir dönem başlıyor."
+  },
+  "10_of_diamonds": {
+    title: "İSKAMBİL - KARO ONLUSU",
+    text: "Maddi veya ailevi bir tamamlanma yaşanıyor."
+  },
+  "ace_of_diamonds": {
+    title: "İSKAMBİL - KARO ASI",
+    text: "Somut ve gerçek bir fırsat ortaya çıkıyor."
+  },
+  "jack_of_diamonds2": {
+    title: "İSKAMBİL - KARO VALESİ", 
+    text: "İlk anda riskli görünen bir fırsat, yön kazandıran bir deneyime dönüşecek."
+  },
+  "queen_of_diamonds2": {
+    title: "İSKAMBİL - KARO KIZI", 
+    text: "Maddi akıl ve sağduyu öne çıkıyor."
+  },
+  "king_of_diamonds2": {
+    title: "İSKAMBİL - KARO PAPAZI", 
+    text: "Sabırla ilerleyen bir süreç kalıcı güven ve istikrar yaratacak."
+  },
+
+  // KUPA (HEARTS)
+  "2_of_hearts": {
+    title: "İSKAMBİL - KUPA İKİLİSİ",
+    text: "Karşılıklı bir bağ güçleniyor ve netlik kazanıyor."
+  },
+  "3_of_hearts": {
+    title: "İSKAMBİL - KUPA ÜÇLÜSÜ",
+    text: "Yakında açık bir destek görecek ve yalnız olmadığını hissedeceksin."
+  },
+  "4_of_hearts": {
+    title: "İSKAMBİL - KUPA DÖRTLÜSÜ",
+    text: "Duygusal olarak kısa bir duraklama iyi gelecek."
+  },
+  "5_of_hearts": {
+    title: "İSKAMBİL - KUPA BEŞLİSİ",
+    text: "Ufak bir hayal kırıklığı, seni daha iyi bir duygusal olasılığa hazırlıyor."
+  },
+  "6_of_hearts": {
+    title: "İSKAMBİL - KUPA ALTILISI",
+    text: "Geçmişten gelen bir konu yumuşak şekilde kapanabilir."
+  },
+  "7_of_hearts": {
+    title: "İSKAMBİL - KUPA YEDİLİSİ",
+    text: "Birden fazla ihtimal içinden biri netleşecek."
+  },
+  "8_of_hearts": {
+    title: "İSKAMBİL - KUPA SEKİZLİSİ",
+    text: "Seni doyurmayan bir şeyden gönül rahatlığıyla uzaklaşıyorsun."
+  },
+  "9_of_hearts": {
+    title: "İSKAMBİL - KUPA DOKUZLUSU",
+    text: "Bir dilek sade ama tatmin edici şekilde gerçekleşiyor."
+  },
+  "10_of_hearts": {
+    title: "İSKAMBİL - KUPA ONLUSU",
+    text: "Duygusal olarak tatmin edici bir tablo oluşuyor."
+  },
+  "ace_of_hearts": {
+    title: "İSKAMBİL - KUPA ASI",
+    text: "Temiz ve açık bir duygusal başlangıç mümkün."
+  },
+  "jack_of_hearts2": {
+    title: "İSKAMBİL - KUPA VALESİ", 
+    text: "Duygular hızlanıyor; dengeyi korumak önemli."
+  },
+  "queen_of_hearts2": {
+    title: "İSKAMBİL - KUPA KIZI", 
+    text: "Duygusal fazlalıklar sadeleşiyor."
+  },
+  "king_of_hearts2": {
+    title: "İSKAMBİL - KUPA PAPAZI", 
+    text: "Sakin, güvenli ve olgun bir sevgi biçimi yerleşiyor."
+  },
+
+  // MAÇA (SPADES)
+  "2_of_spades": {
+    title: "İSKAMBİL - MAÇA İKİLİSİ",
+    text: "Ertelenen karar artık kaçınılmaz hale geliyor."
+  },
+  "3_of_spades": {
+    title: "İSKAMBİL - MAÇA ÜÇLÜSÜ",
+    text: "Kafanı karıştıran etki ortadan kalkacak ve gerçek netleşecek."
+  },
+  "4_of_spades": {
+    title: "İSKAMBİL - MAÇA DÖRTLÜSÜ",
+    text: "Dinlendikçe zihinsel berraklık geri geliyor."
+  },
+  "5_of_spades": {
+    title: "İSKAMBİL - MAÇA BEŞLİSİ",
+    text: "Gerginlik dağılıyor; iç huzuru koruyabileceğin bir zemin oluşuyor."
+  },
+  "6_of_spades": {
+    title: "İSKAMBİL - MAÇA ALTILISI",
+    text: "Zihinsel olarak daha sakin bir sürece geçiyorsun."
+  },
+  "7_of_spades": {
+    title: "İSKAMBİL - MAÇA YEDİLİSİ",
+    text: "Gizli kalan bir detay açığa çıkabilir."
+  },
+  "8_of_spades": {
+    title: "İSKAMBİL - MAÇA SEKİZLİSİ",
+    text: "Seni sınırlayan düşünceyi fark edip özgürleşeceksin."
+  },
+  "9_of_spades": {
+    title: "İSKAMBİL - MAÇA DOKUZLUSU",
+    text: "Endişeler azalıyor; zihnin hafifliyor."
+  },
+  "10_of_spades": {
+    title: "İSKAMBİL - MAÇA ONLUSU",
+    text: "Zor bir kapanışın ardından zihinsel hafiflik geliyor."
+  },
+  "ace_of_spades2": {
+    title: "İSKAMBİL - MAÇA ASI", 
+    text: "Bir gerçek yeniden fark ediliyor ve karar netleşiyor."
+  },
+  "jack_of_spades2": {
+    title: "İSKAMBİL - MAÇA VALESİ", 
+    text: "Bilginin gecikmesi sabır gerektirebilir."
+  },
+  "queen_of_spades2": {
+    title: "İSKAMBİL - MAÇA KIZI", 
+    text: "Net bir gerçek ortaya çıkacak; ilk anda sert, sonrasında ferahlatıcı."
+  },
+  "king_of_spades2": {
+    title: "İSKAMBİL - MAÇA PAPAZI", 
+    text: "Mantık ön plana geçiyor ve karmaşa dağılıyor."
+  },
+
+  // JOKER
+  "black_joker": {
+    title: "İSKAMBİL - SİYAH JOKER",
+    text: "Plan dışı bir gelişme seni daha doğru bir yola yönlendiriyor."
   }
 };
 
@@ -485,65 +687,56 @@ const ISKAMBIL_EXPLAINS: Record<string, Explain> = {
 export default function FalPage() {
   
   // TAROT_EXPLAINS objesindeki tüm key'leri alıp dosya adlarını oluşturur.
-  // Bu yöntem, sadece yorumu olan kartların çekilmesini sağlar.
   const tarotCards = Object.keys(TAROT_EXPLAINS).map(key => {
-    // Özel durumlar ve sizin güncellediğiniz dosya uzantıları
-    if (key === 'Judgement' || key === 'Değnek Altılısı' || key === 'Değnek Beşlisi' || key === 'Değnek Sekizlisi') {
+    // Kural 1: Özel Durum: Judgement kartı .jpg uzantılıdır.
+    if (key === 'Judgement') {
         return `${key}.jpg`;
     }
-    // Cups01'i listede var dediğiniz için de özel olarak .jpeg yapıyoruz
-    if (key.startsWith('Cups')) {
-        return `${key}.jpeg`; 
-    }
     
-    // Türkçe karakterli ve Büyük Arkana kartları
-    if (key.startsWith('Değnek') || key.includes('-') || key === 'justice' || key === 'lovers' || key === 'star' || key === 'strength' || key === 'temperance' || key === 'world' || key === 'Page of Wands') {
-        return `${key}.jpeg`;
-    }
-    
-    // Geri kalan Minör Arcana
+    // Kural 2: Judgement dışındaki tüm Tarot kartları .jpeg uzantısını kullanır.
     return `${key}.jpeg`;
   });
   
+// Yeni İskambil yorumlarına göre kart listesi otomatik oluşturulur (.png uzantısıyla)
   const iskambilCards = Object.keys(ISKAMBIL_EXPLAINS).map(k => `${k}.png`);
-  
   const [tarot, setTarot] = useState<string | null>(null);
   const [iskambil, setIskambil] = useState<string | null>(null);
   const [flipT, setFlipT] = useState(false);
   const [flipI, setFlipI] = useState(false);
   // Yorumların görünürlüğünü kontrol eden state
   const [showExplanation, setShowExplanation] = useState(false);
-
-  // Dosya adından (uzantısı silinmiş ve temizlenmiş haliyle) key'i çıkarma fonksiyonu
+// Dosya adından (uzantısı silinmiş ve temizlenmiş haliyle) key'i çıkarma fonksiyonu
   const keyFrom = (f: string | null) => {
       if (!f) return "";
-      let key = f.replace(/\.(jpeg|jpg|png)$/i, "");
-      // Baştaki/sondaki fazladan boşlukları sil (Türkçe kart isimlerinde olabilecek sorunlar için)
+  let key = f.replace(/\.(jpeg|jpg|png)$/i, "");
+      // Baştaki/sondaki fazladan boşlukları sil
       return key.trim();
   };
   
   useEffect(() => {
     draw();
   }, []);
-
   function draw() {
     // Yeni çekimde her şeyi sıfırla
     setFlipT(false);
     setFlipI(false);
-    setShowExplanation(false); 
-    
-    // Rastgele kart seçimi
+    setShowExplanation(false);
+// Rastgele kart seçimi
     const t = tarotCards[Math.floor(Math.random() * tarotCards.length)];
     const i = iskambilCards[Math.floor(Math.random() * iskambilCards.length)];
 
     setTarot(t);
-    setIskambil(i);
+  setIskambil(i);
+  
+  // Hata Ayıklama (Debug) için konsola dosya adlarını yazdır
+  console.log("Seçilen Tarot Kartı Dosya Adı (Kontrol Edilmesi Gereken):", t);
+  console.log("Seçilen İskambil Kartı Dosya Adı:", i);
+
 
     // 1. Kart açılışlarını başlat
     setTimeout(() => setFlipT(true), 500);
     setTimeout(() => setFlipI(true), 900);
-    
-    // 2. Kartlar açıldıktan sonra (1700ms) yorumları göster
+// 2. Kartlar açıldıktan sonra (1700ms) yorumları göster
     setTimeout(() => setShowExplanation(true), 1700);
   }
 
@@ -552,10 +745,16 @@ export default function FalPage() {
   const iskExplain = iskambil ? ISKAMBIL_EXPLAINS[keyFrom(iskambil)] : null;
 
   return (
-    <div style={{ padding: 24, textAlign: "center", fontFamily: "serif" }}>
+    <div style={{ padding: 24, fontFamily: "serif" }}> 
       <style>{`
         /* Mevcut CSS Stilleri */
-        .cards { display:flex; gap:24px; justify-content:center; }
+        .cards-container { 
+          display: flex; 
+          gap: 24px; 
+          justify-content: center;
+          margin-bottom: 20px;
+      
+  }
         .card { width:170px; height:260px; perspective:1000px; }
         .inner { width:100%; height:100%; position:relative; transition:700ms; transform-style:preserve-3d; }
         .flip { transform:rotateY(180deg); }
@@ -563,7 +762,8 @@ export default function FalPage() {
         .front { transform:rotateY(180deg); }
         .img { width:100%; height:100%; object-fit:contain; padding:6px; }
         .box { 
-          max-width:620px; 
+         
+  max-width:620px; 
           margin:20px auto; 
           padding:20px; 
           background:#fff; 
@@ -572,24 +772,48 @@ export default function FalPage() {
           opacity: 0; 
           transform: translateY(10px); 
           transition: opacity 500ms ease-out, transform 500ms ease-out;
-        }
+  }
         .box.visible {
           opacity: 1;
-          transform: translateY(0);
+  transform: translateY(0);
         }
-        .title { font-size:20px; margin-bottom:8px; }
-        .text { white-space:pre-line; line-height:1.7; }
+        .title { font-size:20px; margin-bottom:8px;
+  }
+        .text { white-space:pre-line; line-height:1.7;
+  }
+        
+        /* BUTON VE HİZALAMA STİLLERİ (Yorum kutusunun sağ köşesi) */
+        .control-area {
+          max-width: 620px;
+  /* Yorum kutusu ile aynı genişlikte ortalanır */
+          margin: 0 auto;
+  text-align: right; /* İçindeki öğeyi sağa hizalar */
+        }
+        .small-button {
+          padding: 8px 16px;
+  font-size: 14px;
+          border-radius: 8px;
+          cursor: pointer;
+          background-color: #3f51b5; 
+          color: white;
+          border: none;
+          margin-top: 20px;
+  /* Kartlar ile aradaki boşluk */
+        }
+
       `}</style>
-      <h1>Fal Ekranı 🔮</h1>
-      <div className="cards">
+      <h1 style={{ textAlign: "center" }}>Fal Ekranı</h1>
+      
+      {/* Kartlar */}
+      <div className="cards-container"> 
         {/* TAROT */}
         <div className="card">
           <div className={`inner ${flipT ? "flip" : ""}`}>
             <div className="face">
-              <img src="/tarot/back.png" className="img" alt="Tarot Kartı Arkası" />
+              <img src="/tarot/back.png" className="img" alt="Tarot Kart Arkası" />
             </div>
             <div className="face front">
-              {tarot && <img src={`/tarot/${tarot}`} className="img" alt={tarotExplain?.title || "Tarot Kartı"} />}
+              {tarot && <img src={`/tarot/${tarot}`} className="img" alt={tarotExplain?.title || "Tarot Kart"} />}
             </div>
           </div>
         </div>
@@ -597,16 +821,24 @@ export default function FalPage() {
         <div className="card">
           <div className={`inner ${flipI ? "flip" : ""}`}>
             <div className="face">
-              <img src="/iskambil/back.png" className="img" alt="İskambil Kartı Arkası" />
+              <img src="/iskambil/back.png" className="img" alt="İskambil Kart Arkası" />
             </div>
             <div className="face front">
-              {iskambil && <img src={`/iskambil/${iskambil}`} className="img" alt={iskExplain?.title || "İskambil Kartı"} />}
+              {iskambil && <img src={`/iskambil/${iskambil}`} className="img" alt={iskExplain?.title || "İskambil Kart"} />}
             </div>
           </div>
         </div>
       </div>
       
-      {/* TAROT YORUMU - showExplanation true olduğunda görünür */}
+      {/* Kontrol Alanı (Butonu Yorum Kutularının Sağına Hizalar) */}
+      <div className="control-area">
+        <button onClick={draw} className="small-button">
+          Tekrar Çek
+        </button>
+      
+  </div>
+      
+      {/* TAROT YORUMU - Butonun hemen altında, aynı max-width'te hizalı */}
       {tarotExplain && (
         <div className={`box ${showExplanation ? "visible" : ""}`}>
           <div className="title">{tarotExplain.title}</div>
@@ -614,17 +846,14 @@ export default function FalPage() {
         </div>
       )}
       
-      {/* İSKAMBİL YORUMU - showExplanation true olduğunda görünür */}
-      {iskExplain && (
+      {/* İSKAMBİL YORUMU */}
+     
+  {iskExplain && (
         <div className={`box ${showExplanation ? "visible" : ""}`}>
           <div className="title">{iskExplain.title}</div>
           <div className="text">{iskExplain.text}</div>
         </div>
       )}
-      
-      <button onClick={draw} style={{ marginTop: 16 }}>
-        Tekrar Çek
-      </button>
     </div>
   );
 }
