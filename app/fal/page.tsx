@@ -6,7 +6,8 @@ type Explain = {
   text: string;
 };
 
-/* ================= TAROT YORUMLARI (GÜNCELLENMİŞ) ================= */
+/* ================= TAROT YORUMLARI (GÜNCEL) ================= */
+// DİKKAT: Anahtarlar (key) yeni dosya isimleriyle eşleşecek şekilde güncellenmiştir (Örn: "the-chariot" yerine "TheChariot").
 const TAROT_EXPLAINS: Record<string, Explain> = {
   // --- KUPALAR ---
   Cups01: {
@@ -255,7 +256,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Mantık, tarafsızlık, net karar verme.\n" +
       "Duygudan çok akla yaslanma. Otorite, düzgün iletişim, adil duruş. Biraz esnemek ve duyguyu da hesaba katmak fayda sağlar."
   },
-  // --- DEĞNEKLER (Düzeltildi: Page of Wands) ---
+  // --- DEĞNEKLER ---
   Wands01: {
     title: "TAROT - DEĞNEK ASI",
     text:
@@ -316,7 +317,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Üstüne çok yük almışsın.\n" +
       "‘Her şeyi ben halledeyim’ modu çalışıyor ama omuzların dolmuş. İş bitmeye yakın ama yorgunluk fazla. Biraz paylaşsan, biraz bıraksan hem rahatlayacak hem de özgürleşeceksin."
   },
-  "Page of Wands": { // <<< DİKKAT: Dosya adınızla ("Page of Wands.jpeg") eşleşecek şekilde ayarlandı.
+  "PageOfWands": { // <<< YENİ DOSYA ADI: PageOfWands.jpeg
     title: "TAROT - DEĞNEK PRENSİ",
     text:
       "İçinde bir heves kıpırdıyor. Yeni bir fikir, yeni bir yön, “yapsam mı?” dedirten bir enerji var.\n" +
@@ -340,116 +341,116 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Gücünü fark edersen ve adımların planlı olursa güçlü sonuçlar alırsın.\n" +
       "Biraz sakinlik, biraz strateji her şeyi toparlar. Detaylara özen göster ve enerjini doğru alanlara yönelt; o zaman etkini iki katına çıkarırsın."
   },
-  // --- BÜYÜK ARKANA ---
+  // --- BÜYÜK ARKANA (MAJOR ARCANA) ---
   Judgement: {
     title: "TAROT - MAHKEME",
     text:
       "Geçmişi bırakıp kendinle dürüstçe yüzleştiğinde yepyeni bir kapı açılıyor.\n" +
       "İç sesin dinle, neyin doğru, neyin bitmiş, neyin seni çağırdığını daha net duyacaksın. Kendini affet ve adım at. Yeni bir başlangıç seni bekliyor."
   },
-  justice: {
+  Justice: { // <<< GÜNCELLENDİ
     title: "TAROT - ADALET",
     text:
       "Kendine dürüst ol, net ol. İçinde ne doğruysa ona bak.\n" +
       "Gerçekten sana en iyi uyacak yolu bulmak için zor bir seçim yapman gerekebilir. Uzun vadede seni en iyi hissettirecek seçeneği tercih edersen, yolun açılacak."
   },
-  lovers: {
+  Lovers: { // <<< GÜNCELLENDİ
     title: "TAROT - AŞIKLAR",
     text:
       "Bir seçim var; bu ilişki, iş ya da hayat yönü olabilir.\n" +
       "Sadece duyguyla gitme, sonra ‘keşke düşünseydim’ dersin. Sadece mantıkla gitme, içte bir boşluk kalır. Seçimini kalbinle aklının buluştuğu yerden yap, o zaman önündeki adımlar daha görünür ve daha akıcı olacak."
   },
-  star: {
+  Star: { // <<< GÜNCELLENDİ
     title: "TAROT - YILDIZ",
     text:
       "Umudun tekrar canlandığı bir dönemdesin.\n" +
       "İçinde uzun zamandır kısık kalan ışık yeniden parlıyor. Ne yapacağını tam bilmiyor olsan bile aradığın yön yavaş yavaş beliriyor. İç sesine güven; sakin kalırsan yol kendiliğinden açılacak."
   },
-  strength: {
+  Strength: { // <<< GÜNCELLENDİ
     title: "TAROT - GÜÇ",
     text:
       "Kendine karşı yumuşak olursan içindeki güç daha rahat akacak.\n" +
       "Zorladıkça değil, sakinledikçe toparlanıyorsun. Cesaretin de var, dayanıklılığın da… Duygularını bastırma ama onların seni sürüklemesine de izin verme; dengeyi bulduğun anda her şey daha kolay ilerleyecek."
   },
-  temperance: {
+  Temperance: { // <<< GÜNCELLENDİ
     title: "TAROT - DENGE",
     text:
       "Her şeyi hemen çözmek zorunda değilsin.\n" +
       "Dozunu tutturunca işler kendiliğinden yumuşuyor. Ama ipin ucunu kaçırırsan da bedenin, ruhun hemen sinyal veriyor: gerilim, huzursuzluk, sabırsızlık… Kendinle kavga etmeden, orta yolu bul; o zaman akış zaten geliyor."
   },
-  "the-chariot": {
+  "TheChariot": { // <<< GÜNCELLENDİ
     title: "TAROT - SAVAŞ ARABASI",
     text:
       "Bu kart “tamam, artık yola çıkıyoruz” hali.\n" +
       "Dağınık duygular, dış sesler, engeller… hepsi var ama seni durdurmuyor. Çok zorlamadan ya da yönü kaybetmeden devam etmelisin. Mesajı basit: Nereye gittiğini bilirsen yol seni taşır; bilmezsen yorulursun."
   },
-  "the-emperor": {
+  "TheEmperor": { // <<< GÜNCELLENDİ
     title: "TAROT - İMPARATOR",
     text:
       "Bu kart “buradayım ve sorumluluk bende” diyor.\n" +
       "Netlik, sınır koyma, sağlam durma hali. Duygudan çok akıl, kaostan çok düzen. Hayatında “bunu ben taşıyorum” dediğin bir alan var. İnatlaşmadan, her şeyi tek başına yüklenmeden devam etmelisin; yükün altında ezilmek zorunda değilsin."
   },
-  "the-empress": {
+  "TheEmpress": { // <<< GÜNCELLENDİ
     title: "TAROT - İMPARATORİÇE",
     text:
       "Zorlamadan büyüyen şeyler, ilgi gördükçe açılan duygular, bedenle ve hayatla temas hâli.\n" +
       "Şimdi şefkatli olma zamanı; ister bir kişiye, ister bir çocuğa, ister bir projeye… İlgi verdiğin şey büyür ama kendini de beslemen gerekir. Yumuşak ol ama zayıf olma."
   },
-  "the-fool": {
+  "TheFool": { // <<< GÜNCELLENDİ
     title: "TAROT - DELİ",
     text:
       "İçinde bir merak, “bilmiyorum ama denemek istiyorum” hâli.\n" +
       "Mantık “dur” dese bile iç ses “git” diyor. Her şey planlı olmak zorunda değil; bazen kendine güvenip yürümek gerekir. Kalbini dinlerken aklını tamamen geride bırakmadan kendine bir şans ver."
   },
-  "the-hanged-man": {
+  "TheHangedMan": { // <<< GÜNCELLENDİ
     title: "TAROT - ASILAN ADAM",
     text:
       "Ya gereksiz yere bekliyorsun ya da bırakman gereken şeyi inatla tutuyorsun.\n" +
       "Bu kart bir şey yapmadan önce durup, olan bitene geniş açıdan bakmanı tavsiye eder. Askıda kalmak rahatsız edici olabilir ama bu bir ceza değil; fark etme zamanı."
   },
-  "the-hermit": {
+  "TheHermit": { // <<< GÜNCELLENDİ
     title: "TAROT - ERMİŞ",
     text:
       "Gürültüden uzaklaşmak, sessizlik, kendi sesini duymak en net rehberdir.\n" +
       "En iyi cevap içinde; kendini dinlemekten korkma. İçindeki potansiyelin farkına var ama oraya kapanıp kalma. Gördüğün ışığın rehberliğinde tekrar hayata karış."
   },
-  "the-hierophant": {
+  "TheHierophant": { // <<< GÜNCELLENDİ
     title: "TAROT - AZİZ",
     text:
       "Sorgulamadan ya da sırf isyan olsun diye reddetmemelisin.\n" +
       "Öğrenmeye, anlamaya açık ol ve deneyimi olan, güvenilir kişilerden destek almaya çalış. Kendi yolunu bularken, senden önce yürümüş olanların bilgisini tamamen yok sayma."
   },
-  "the-high-priestess": {
+  "TheHighPriestess": { // <<< GÜNCELLENDİ
     title: "TAROT - BAŞRAHİBE",
     text:
       "Bu kart sezgi, iç bilgelik ve sessiz bilgiyi anlatır.\n" +
       "Her şey hemen açılmak zorunda değil; bazı cevaplar zamana bırakılır. Mantıktan çok hisler konuşur. İçten içe sezdiğin gerçek mi değil mi, bekle, cevap zorladığında değil, sakinleştiğinde ortaya çıkacak."
   },
-  "the-magician": {
+  "TheMagician": { // <<< GÜNCELLENDİ
     title: "TAROT - BÜYÜCÜ",
     text:
       "Başlamak için bilgin, becerin, imkânın var, kapı açık.\n" +
       "Sadece odaklanıp adım atman gerekiyor. Potansiyelini küçümseme ve gücü yanlış yönde kullanma. Gücünü nasıl kullandığın sonucu belirler."
   },
-  "the-moon": {
+  "TheMoon": { // <<< GÜNCELLENDİ
     title: "TAROT - AY",
     text:
       "Bu kart belirsiz bir süreçten geçmeyi anlatır; her şey net değil ama bu kötü olduğu anlamına gelmez.\n" +
       "Duygular dalgalı olabilir; bu yüzden acele karar yerine gözlem iyi gelir. Netlik gelene kadar kendine karşı nazik ol."
   },
-  "the-sun": {
+  "TheSun": { // <<< GÜNCELLENDİ
     title: "TAROT - GÜNEŞ",
     text:
       "Bu kart açıklık, ferahlık ve “oh be” hissi.\n" +
       "Bir şeyler aydınlanıyor, yük hafifliyor. Ama sen kendini kısıyor, mutlu olmaya izin vermiyor olabilirsin. Güneş orada; perdeleri biraz aralaman yeter."
   },
-  "wheel-of-fortune": {
+  "WheelOfFortune": { // <<< GÜNCELLENDİ
     title: "TAROT - KADER ÇARKI",
     text:
       "Bu kart değişimi anlatır. Kontrol sende değil ama hareket var.\n" +
       "Bir döngü kapanıp yenisi açılıyor. Şans, zamanlama ve beklenmedik gelişmeler devrede. Zorladıkça değil, akışa uydukça ilerler. Çark dönüyorsa, sen de direnmek yerine yönünü ayarla."
   },
-  world: {
+  World: { // <<< GÜNCELLENDİ
     title: "TAROT - DÜNYA",
     text:
       "Bir döngü kapanıyor, parça parça olan şeyler yerli yerine oturmuş.\n" +
@@ -457,7 +458,8 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
   }
 };
 
-/* ================= YENİ İSKAMBİL YORUMLARI ================= */
+/* ================= İSKAMBİL YORUMLARI ================= */
+// İskambil yorumlarında dosya ismi değişikliği olmadığı varsayılmıştır.
 const ISKAMBIL_EXPLAINS: Record<string, Explain> = {
   // SİNEK (CLUBS)
   "2_of_clubs": {
@@ -687,61 +689,57 @@ export default function FalPage() {
   
   // TAROT_EXPLAINS objesindeki tüm key'leri alıp dosya adlarını oluşturur.
   const tarotCards = Object.keys(TAROT_EXPLAINS).map(key => {
-    // Kural 1: Özel Durum: Judgement kartı .jpg uzantılıdır.
+    // Judgement kartı özel olarak .jpg uzantılıdır.
     if (key === 'Judgement') {
         return `${key}.jpg`;
     }
-    
-    // Kural 2: Judgement dışındaki tüm Tarot kartları .jpeg uzantısını kullanır.
-    
-    // Kural 3: "Page of Wands" haricindeki Değnek serisi WandsXX.jpeg formatında olduğu için dosya adlarını direkt anahtardan türetiriz.
-    if (key === 'Page of Wands') {
-        return `Page of Wands.jpeg`; // <<< Sizin dosya adınızla tam eşleşme
-    }
-    
+    // Geri kalan tüm kartlar .jpeg uzantılıdır ve dosya adı anahtarla birebir aynıdır (Örn: "TheChariot" -> "TheChariot.jpeg").
     return `${key}.jpeg`;
   });
   
-// Yeni İskambil yorumlarına göre kart listesi otomatik oluşturulur (.png uzantısıyla)
+  // İskambil kart listesi önceki gibi oluşturulur.
   const iskambilCards = Object.keys(ISKAMBIL_EXPLAINS).map(k => `${k}.png`);
+  
   const [tarot, setTarot] = useState<string | null>(null);
   const [iskambil, setIskambil] = useState<string | null>(null);
   const [flipT, setFlipT] = useState(false);
   const [flipI, setFlipI] = useState(false);
-  // Yorumların görünürlüğünü kontrol eden state
   const [showExplanation, setShowExplanation] = useState(false);
-// Dosya adından (uzantısı silinmiş ve temizlenmiş haliyle) key'i çıkarma fonksiyonu
+  
+  // Dosya adından (uzantısı silinmiş ve temizlenmiş haliyle) key'i çıkarma fonksiyonu
   const keyFrom = (f: string | null) => {
       if (!f) return "";
-  let key = f.replace(/\.(jpeg|jpg|png)$/i, "");
-      // Baştaki/sondaki fazladan boşlukları sil
+      let key = f.replace(/\.(jpeg|jpg|png)$/i, "");
+      // Bu fonksiyon yeni isimlendirmeyle (boşluksuz) mükemmel çalışır.
       return key.trim();
   };
   
   useEffect(() => {
     draw();
   }, []);
+  
   function draw() {
     // Yeni çekimde her şeyi sıfırla
     setFlipT(false);
     setFlipI(false);
     setShowExplanation(false);
-// Rastgele kart seçimi
+    
+    // Rastgele kart seçimi
     const t = tarotCards[Math.floor(Math.random() * tarotCards.length)];
     const i = iskambilCards[Math.floor(Math.random() * iskambilCards.length)];
 
     setTarot(t);
-  setIskambil(i);
-  
-  // Hata Ayıklama (Debug) için konsola dosya adlarını yazdır
-  console.log("Seçilen Tarot Kartı Dosya Adı (Kontrol Edilmesi Gereken):", t);
-  console.log("Seçilen İskambil Kartı Dosya Adı:", i);
+    setIskambil(i);
+    
+    // Hata Ayıklama (Debug) için konsola dosya adlarını yazdır
+    console.log("Seçilen Tarot Kartı Dosya Adı (Kontrol Edilmesi Gereken):", t);
+    console.log("Seçilen İskambil Kartı Dosya Adı:", i);
 
 
     // 1. Kart açılışlarını başlat
     setTimeout(() => setFlipT(true), 500);
     setTimeout(() => setFlipI(true), 900);
-// 2. Kartlar açıldıktan sonra (1700ms) yorumları göster
+    // 2. Kartlar açıldıktan sonra (1700ms) yorumları göster
     setTimeout(() => setShowExplanation(true), 1700);
   }
 
@@ -815,6 +813,7 @@ export default function FalPage() {
         <div className="card">
           <div className={`inner ${flipT ? "flip" : ""}`}>
             <div className="face">
+              {/* Tarot arka yüzü, önceki çalışan back.png olarak korundu */}
               <img src="/tarot/back.png" className="img" alt="Tarot Kart Arkası" />
             </div>
             <div className="face front">
@@ -826,6 +825,7 @@ export default function FalPage() {
         <div className="card">
           <div className={`inner ${flipI ? "flip" : ""}`}>
             <div className="face">
+              {/* İskambil arka yüzü, önceki çalışan back.png olarak korundu */}
               <img src="/iskambil/back.png" className="img" alt="İskambil Kart Arkası" />
             </div>
             <div className="face front">
