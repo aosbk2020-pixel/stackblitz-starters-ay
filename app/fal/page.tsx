@@ -805,7 +805,9 @@ export default function FalPage() {
         }
 
       `}</style>
-      <h1 style={{ textAlign: "center" }}>AY BACIM</h1>
+      <h1 style={{ textAlign: "center", fontSize: 20, letterSpacing: 1, fontWeight: 'bold' }}>
+          AY BACIM
+      </h1>
       
       {/* Kartlar */}
       <div className="cards-container"> 
