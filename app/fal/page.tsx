@@ -7,7 +7,6 @@ type Explain = {
 };
 
 /* ================= TAROT YORUMLARI (GÜNCELLENMİŞ) ================= */
-// Swords03 ve Swords10 Kılıç kartları kaldırıldı.
 const TAROT_EXPLAINS: Record<string, Explain> = {
   // --- KUPALAR ---
   Cups01: {
@@ -256,86 +255,86 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Mantık, tarafsızlık, net karar verme.\n" +
       "Duygudan çok akla yaslanma. Otorite, düzgün iletişim, adil duruş. Biraz esnemek ve duyguyu da hesaba katmak fayda sağlar."
   },
-  // --- DEĞNEKLER (TEKRAR İNGİLİZCE NUMARALI KEY'LERE DÖNÜLDÜ) ---
+  // --- DEĞNEKLER (Düzeltildi: Page of Wands) ---
   Wands01: {
     title: "TAROT - DEĞNEK ASI",
     text:
       "Bu kart bir kıvılcım anı. İçinden gelen ani bir heves, “bunu yapmak istiyorum” hissi.\n" +
       "Henüz plan yok ama enerji var. İlham taze, motivasyon canlı. Cesaret ya da hareket eksik; erteleyip söndürüyor olabilirsin. Kıvılcımı fark ettiysen, küçük de olsa bir adım at."
   },
-  Wands02: { // Değnek İkilisi
+  Wands02: { 
     title: "TAROT - DEĞNEK İKİLİSİ",
     text:
       "Kararsızlık içindesin; ‘ya olmazsa?’ ve ‘acaba daha iyisi var mı?’ diye düşündüğün bir dönemdesin.\n" +
       "Aslında elinde sağlam bir temel var. Bir adım daha atarsan alan genişleyecek ve yol kendiliğinden açılacak."
   },
-  Wands03: { // Değnek Üçlüsü
+  Wands03: { 
     title: "TAROT - DEĞNEK ÜÇLÜSÜ",
     text:
       "Bir adım atmışsın ve şimdi ufka bakıyorsun; fırsatlar, haberler, yeni yollar yaklaşmakta.\n" +
       "Ama bir yandan da “ya yanlış tarafa bakıyorsam?” diye bir tereddüdün var. Aslında seçeneklerin açık, biraz sabır, biraz güven… netlik gelince resim kendiliğinden tamamlanacak."
   },
-  Wands04: { // Değnek Dörtlüsü
+  Wands04: { 
     title: "TAROT - DEĞNEK DÖRTLÜSÜ",
     text:
       "Mutluluk kapıda ama sen tam içine giremiyorsun. ‘Sevineyim mi, yoksa daha erken mi?’ tereddüdü var.\n" +
       "Bir tık gevşesen, keyif kendiliğinden akacak ve emeğinin meyvesini alacaksın."
   },
-  Wands05: { // Değnek Beşlisi
+  Wands05: { 
     title: "TAROT - DEĞNEK BEŞLİSİ",
     text:
       "Ufak tefek sürtüşmeler, aynı anda herkesin konuştuğu bir ortam.\n" +
       "“Kim haklı çıkacak bakalım” havası var. Boş tartışmalara girme. Biraz sabır, biraz da esnek bakış açısı yeter. Rahat bırakınca işler kendiliğinden toparlanıyor."
   },
-  Wands06: { // Değnek Altılısı
+  Wands06: { 
     title: "TAROT - DEĞNEK ALTILISI",
     text:
       "‘Oh be, sonunda!’ hissini yaşayabilmek ve çevreden onay, destek alabilmek için elinden gelenin en iyisini yap ve kendini kutla.\n" +
       "Mesele zaferden çok, kendini haklı bulmayı öğrenmen. Esas ödül senin iç rahatlığın."
   },
-  Wands07: { // Değnek Yedilisi
+  Wands07: { 
     title: "TAROT - DEĞNEK YEDİLİSİ",
     text:
       "Kendi duruşunu koruma dönemindesin; bazen açıklama yapmak zorundaymışsın gibi hissetsen de aslında sağlam zemindesin.\n" +
       "Gereksiz tartışmalara girme, enerjini gerçekten önemli olana sakla."
   },
-  Wands08: { // Değnek Sekizlisi
+  Wands08: { 
     title: "TAROT - DEĞNEK SEKİZLİSİ",
     text:
       "Olaylar ya peş peşe geliyor ya da birden tıkanıyor, ama kendine net bir yön belirlersen amacına rahatlıkla ulaşabilirsin.\n" +
       "Değişim istiyorsan, o kıvılcımı önce sen yakmalısın; hareketi başlatınca her şey hızla yerine oturacak."
   },
-  Wands09: { // Değnek Dokuzlusu
+  Wands09: { 
     title: "TAROT - DEĞNEK DOKUZLUSU",
     text:
       "Bir şey için çok çabalamışsın, enerjin düşmüş ama hâlâ ayaktasın.\n" +
       "Şu an aşırı tetikte olman normal; çünkü eski yorgunluklar bugünü gereğinden sert gösteriyor. Ama gerçekten son düzlüğe girmişsin. Biraz sabır, biraz da kendine şefkat… hepsi yerine oturacak."
   },
-  Wands10: { // Değnek Onlusu
+  Wands10: { 
     title: "TAROT - DEĞNEK ONLUSU",
     text:
       "Üstüne çok yük almışsın.\n" +
       "‘Her şeyi ben halledeyim’ modu çalışıyor ama omuzların dolmuş. İş bitmeye yakın ama yorgunluk fazla. Biraz paylaşsan, biraz bıraksan hem rahatlayacak hem de özgürleşeceksin."
   },
-  "Page of Wands": { 
+  "Page of Wands": { // <<< DİKKAT: Dosya adınızla ("Page of Wands.jpeg") eşleşecek şekilde ayarlandı.
     title: "TAROT - DEĞNEK PRENSİ",
     text:
       "İçinde bir heves kıpırdıyor. Yeni bir fikir, yeni bir yön, “yapsam mı?” dedirten bir enerji var.\n" +
       "Daha yolun tamamını görmüyorsun ama ilk adımı attığında gerisi kendini gösterecek. Kalbini dinlerken aklını tamamen geride bırakmadan kendine bir şans ver."
   },
-  Wands12: { // Değnek Şövalyesi
+  Wands12: { 
     title: "TAROT - DEĞNEK ŞÖVALYESİ",
     text:
       "Ateş gibi bir enerjin var ama dozunu kaçırmamalısın.\n" +
       "Bir şey istiyorsun ama sabır düşük ve yön biraz karışık. Sakin bir nefes al, detayları kaçırma. Unutma: nereye gittiğini bilmeyen, hiçbir yere gidemez."
   },
-  Wands13: { // Değnek Kraliçesi
+  Wands13: { 
     title: "TAROT - DEĞNEK KRALİÇESİ",
     text:
       "İçindeki potansiyeli açığa çıkarırsan bitiş çizgisine bir adım daha yaklaşırsın.\n" +
       "Çevrendeki insanlara dikkat et, seçici ol ve enerjini doğru alana aktar. Ayrıntılara özen gösterip sezgilerine güvenirsen yolun açacak."
   },
-  Wands14: { // Değnek Kralı
+  Wands14: { 
     title: "TAROT - DEĞNEK KRALI",
     text:
       "Gücünü fark edersen ve adımların planlı olursa güçlü sonuçlar alırsın.\n" +
@@ -694,6 +693,12 @@ export default function FalPage() {
     }
     
     // Kural 2: Judgement dışındaki tüm Tarot kartları .jpeg uzantısını kullanır.
+    
+    // Kural 3: "Page of Wands" haricindeki Değnek serisi WandsXX.jpeg formatında olduğu için dosya adlarını direkt anahtardan türetiriz.
+    if (key === 'Page of Wands') {
+        return `Page of Wands.jpeg`; // <<< Sizin dosya adınızla tam eşleşme
+    }
+    
     return `${key}.jpeg`;
   });
   
