@@ -6,8 +6,10 @@ type Explain = {
   text: string;
 };
 
-/* ================= TAROT ================= */
+/* ================= TAROT YORUMLARI ================= */
+// Swords03 ve Swords10 Kılıç kartları kaldırıldı.
 const TAROT_EXPLAINS: Record<string, Explain> = {
+  // --- KUPALAR ---
   Cups01: {
     title: "TAROT - KUPA ASI",
     text:
@@ -95,6 +97,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Duygular kontrollü ve olgun.\n" +
       "Sakin, anlayışlı ve dengeli bir enerji; ne hissettiğini biliyor ve taşırmadan yönetebiliyorsun. Karşındakine biraz açık olmak, yükü daha da hafifletir."
   },
+  // --- TILSIMLAR ---
   Pents01: {
     title: "TAROT - TILSIM ASI",
     text:
@@ -179,6 +182,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Ne yapıyorsan uzun vadeli düşünerek yapıyorsun; para, iş veya düzen konusunda sağlam bir kontrol hissi var.\n" +
       "Aşırı kontrol etme ya da “her şey benim istediğim gibi olsun” baskısı olabilir. Biraz esnetince her şey yoluna girer."
   },
+  // --- KILIÇLAR (Swords03 ve Swords10 Kılıçları hariç) ---
   Swords01: {
     title: "TAROT - KILIÇ ASI",
     text:
@@ -191,6 +195,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Kararsızlık ve “bekleyeyim de netleşsin” hissi.\n" +
       "İki seçenek arasında duruyorsun; acele etmemen iyi ama sonsuza kadar da beklememek lazım. Gözünü açma ve karar verme anı. Böylece hangi yolun seni rahatlattığını daha net görürsün."
   },
+  // Swords03: KALDIRILDI
   Swords04: {
     title: "TAROT - KILIÇ DÖRTLÜSÜ",
     text:
@@ -227,6 +232,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Gece uyutmayan düşünceler.\n" +
       "Gereğinden büyük endişe, kuruntu, “ya şöyle olursa?” korkusu. Zihin seni yoruyor; gerçek durum genelde düşündüğün kadar karanlık değil. Kaygıdan uzaklaşıp biraz nefes aldığınızda, geleceğiniz önünüzde açılacaktır."
   },
+  // Swords10: KALDIRILDI
   Swords11: {
     title: "TAROT - KILIÇ PRENSİ",
     text:
@@ -251,6 +257,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Mantık, tarafsızlık, net karar verme.\n" +
       "Duygudan çok akla yaslanma. Otorite, düzgün iletişim, adil duruş. Biraz esnemek ve duyguyu da hesaba katmak fayda sağlar."
   },
+  // --- DEĞNEKLER ---
   Wands01: {
     title: "TAROT - DEĞNEK ASI",
     text:
@@ -335,6 +342,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
       "Gücünü fark edersen ve adımların planlı olursa güçlü sonuçlar alırsın.\n" +
       "Biraz sakinlik, biraz strateji her şeyi toparlar. Detaylara özen göster ve enerjini doğru alanlara yönelt; o zaman etkini iki katına çıkarırsın."
   },
+  // --- BÜYÜK ARKANA ---
   Judgement: {
     title: "TAROT - MAHKEME",
     text:
@@ -451,7 +459,7 @@ const TAROT_EXPLAINS: Record<string, Explain> = {
   }
 };
 
-/* ================= İSKAMBİL ================= */
+/* ================= İSKAMBİL YORUMLARI ================= */
 const ISKAMBIL_EXPLAINS: Record<string, Explain> = {
   "2_of_clubs": {
     title: "İSKAMBİL - SİNEK İKİLİ",
@@ -473,29 +481,46 @@ const ISKAMBIL_EXPLAINS: Record<string, Explain> = {
   }
 };
 
-/* ================= SAYFA ================= */
+/* ================= SAYFA BİLEŞENİ ================= */
 export default function FalPage() {
   
-  // TAROT_EXPLAINS anahtarlarından dosya adlarını oluştururken uzantıları da ekliyoruz.
-  const tarotCards = Object.keys(TAROT_EXPLAINS).map(k => {
-    if (k === 'Judgement') {
-      return `${k}.jpg`; // Judgement için özel jpg uzantısı
+  // TAROT_EXPLAINS objesindeki tüm key'leri alıp dosya adlarını oluşturur.
+  // Bu yöntem, sadece yorumu olan kartların çekilmesini sağlar.
+  const tarotCards = Object.keys(TAROT_EXPLAINS).map(key => {
+    // Özel durumlar ve sizin güncellediğiniz dosya uzantıları
+    if (key === 'Judgement' || key === 'Değnek Altılısı' || key === 'Değnek Beşlisi' || key === 'Değnek Sekizlisi') {
+        return `${key}.jpg`;
     }
-    // Geri kalanlar için varsayılan uzantı (Page of Wands, Türkçe Değnek isimleri ve Minör Arcana)
-    return `${k}.jpeg`; 
+    // Cups01'i listede var dediğiniz için de özel olarak .jpeg yapıyoruz
+    if (key.startsWith('Cups')) {
+        return `${key}.jpeg`; 
+    }
+    
+    // Türkçe karakterli ve Büyük Arkana kartları
+    if (key.startsWith('Değnek') || key.includes('-') || key === 'justice' || key === 'lovers' || key === 'star' || key === 'strength' || key === 'temperance' || key === 'world' || key === 'Page of Wands') {
+        return `${key}.jpeg`;
+    }
+    
+    // Geri kalan Minör Arcana
+    return `${key}.jpeg`;
   });
-
+  
   const iskambilCards = Object.keys(ISKAMBIL_EXPLAINS).map(k => `${k}.png`);
   
   const [tarot, setTarot] = useState<string | null>(null);
   const [iskambil, setIskambil] = useState<string | null>(null);
   const [flipT, setFlipT] = useState(false);
   const [flipI, setFlipI] = useState(false);
-  // Yorumların görünürlüğünü kontrol eden yeni state
+  // Yorumların görünürlüğünü kontrol eden state
   const [showExplanation, setShowExplanation] = useState(false);
 
-  // Dosya adından (uzantısı silinmiş haliyle) key'i çıkarma fonksiyonu
-  const keyFrom = (f: string | null) => (f ? f.replace(/\.(jpeg|jpg|png)$/i, "") : "");
+  // Dosya adından (uzantısı silinmiş ve temizlenmiş haliyle) key'i çıkarma fonksiyonu
+  const keyFrom = (f: string | null) => {
+      if (!f) return "";
+      let key = f.replace(/\.(jpeg|jpg|png)$/i, "");
+      // Baştaki/sondaki fazladan boşlukları sil (Türkçe kart isimlerinde olabilecek sorunlar için)
+      return key.trim();
+  };
   
   useEffect(() => {
     draw();
@@ -507,6 +532,7 @@ export default function FalPage() {
     setFlipI(false);
     setShowExplanation(false); 
     
+    // Rastgele kart seçimi
     const t = tarotCards[Math.floor(Math.random() * tarotCards.length)];
     const i = iskambilCards[Math.floor(Math.random() * iskambilCards.length)];
 
@@ -517,12 +543,11 @@ export default function FalPage() {
     setTimeout(() => setFlipT(true), 500);
     setTimeout(() => setFlipI(true), 900);
     
-    // 2. Kartlar açıldıktan sonra (örneğin 1500ms sonra) yorumları göster
-    // En yavaş kart açılımı (flipI) 900ms'de başlıyor ve 700ms sürüyor (transition). 
-    // Toplam 1600ms. 1700ms veya 2000ms sonra yorumları göstermek iyi bir zamanlama olur.
+    // 2. Kartlar açıldıktan sonra (1700ms) yorumları göster
     setTimeout(() => setShowExplanation(true), 1700);
   }
 
+  // keyFrom fonksiyonu ile elde edilen key'i kullanarak yorumu çekiyoruz.
   const tarotExplain = tarot ? TAROT_EXPLAINS[keyFrom(tarot)] : null;
   const iskExplain = iskambil ? ISKAMBIL_EXPLAINS[keyFrom(iskambil)] : null;
 
@@ -544,8 +569,8 @@ export default function FalPage() {
           background:#fff; 
           border-radius:14px; 
           text-align:left; 
-          opacity: 0; /* Başlangıçta gizle */
-          transform: translateY(10px); /* Hafifçe yukarı kaydırarak girsin */
+          opacity: 0; 
+          transform: translateY(10px); 
           transition: opacity 500ms ease-out, transform 500ms ease-out;
         }
         .box.visible {
